@@ -134,10 +134,36 @@ Main tables include:
 
 **Technology:** Python, Streamlit and SQLite
 
-**Developer:** YOUR FULL NAME
+## Tell Us How You Think
 
-**LinkedIn:** YOUR LINKEDIN PROFILE URL
+### 1. How did you structure your database, and why?
 
----
+I used SQLite to store the application data in separate tables for employees, brands, processes, pods, assignments, availability, and monthly rosters. This structure keeps the data organized and makes it easier to manage relationships between employees and processes. I used foreign keys to connect related records.
 
-*Developed as part of the DataStraw Tech Internship Assessment.*
+### 2. How does your roster generation logic work?
+
+The roster is generated month-wise. The system considers active employees, their process assignments, and their availability. Sundays are marked as weekly offs, while employees with leave or other availability records are handled accordingly. Eligible employees are assigned to processes based on staffing requirements, with workload balancing to distribute shifts more evenly. Coverage gaps are identified separately.
+
+### 3. How does your system handle one employee working across multiple brands or processes?
+
+The assignments table allows an employee to be associated with multiple processes. During roster generation, the system checks those assignments and ensures that an employee is not allocated to more than one process on the same day.
+
+### 4. What happens when an employee is unavailable?
+
+Employees marked as on leave, weekly off, or comp-off are excluded from normal work allocation for the affected date. If this causes a process to have fewer employees than required, the system identifies the coverage gap. A manager can then review and make manual changes.
+
+### 5. What conflicts does your system detect?
+
+The system identifies availability-related conflicts, including leave and weekly-off conflicts, as well as process coverage gaps, unassigned employees, and missing roster entries. These checks help managers identify issues that need attention.
+
+### 6. Which parts are automated, and which require human decisions?
+
+Employee and process management, monthly roster generation, basic workload balancing, and coverage checks are automated. Managers can manually edit roster entries and make final decisions when resolving staffing gaps or operational requirements.
+
+### 7. How would you scale this system for a larger organization?
+
+I would move from SQLite to PostgreSQL, introduce role-based access, improve database indexing, and add automated testing. For larger scheduling requirements, I would consider a dedicated optimization engine to handle more complex allocation rules.
+
+### 8. What would you improve next?
+
+I would first add configurable working calendars for each brand and process, including public holidays and different weekly-off rules. Next, I would improve conflict resolution with backup employee recommendations, add authentication, enable roster export, and use persistent cloud database storage.
