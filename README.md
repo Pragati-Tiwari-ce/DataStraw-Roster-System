@@ -85,7 +85,7 @@ Main tables include:
 1. Clone this repository:
 
    ```bash
-   git clone YOUR_GITHUB_REPOSITORY_URL
+   git clone https://github.com/Pragati-Tiwari-ce/DataStraw-Roster-System.git
    ```
 
 2. Open the project directory:
