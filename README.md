@@ -76,24 +76,41 @@ Main tables include:
 
 ## How to Run Locally
 
-1. Clone this repository.
-2. Install the required dependencies:
+### Prerequisites
+- Python installed.
+- Git installed (optional if downloading the repository as a ZIP).
+
+### Installation
+
+1. Clone this repository:
+
+   ```bash
+   git clone YOUR_GITHUB_REPOSITORY_URL
+   ```
+
+2. Open the project directory:
+
+   ```bash
+   cd DataStraw-Roster-System
+   ```
+
+3. Install dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the application:
+4. Run the application:
 
    ```bash
    python -m streamlit run app.py
    ```
 
-4. Open the local URL displayed in your terminal.
+5. Open the local URL displayed in your terminal.
 
 ## Live Application
 
-[[Open DataStraw Live App](https://datastraw-roster-system-99irkn3beopcuae8k2atne.streamlit.app/)]
+[Open DataStraw Live App](https://datastraw-roster-system-99irkn3beopcuae8k2atne.streamlit.app/)
 
 ## Current Limitations
 
@@ -113,4 +130,14 @@ Main tables include:
 
 ## Author
 
-Developed as a roster management project using Python, Streamlit, and SQLite.
+**Project:** DataStraw Smart Roster Management System
+
+**Technology:** Python, Streamlit and SQLite
+
+**Developer:** YOUR FULL NAME
+
+**LinkedIn:** YOUR LINKEDIN PROFILE URL
+
+---
+
+*Developed as part of the DataStraw Tech Internship Assessment.*
